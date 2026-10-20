@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Animation Demo</title>
+    <style>
+            * {
+            font-family: Arial, sans-serif;
+             box-sizing: 
+            border-box;margin: 0;
+            padding: 0;
+         }
+        body {
+                    text-align: center;
+                                background-color: #ffffff;
+                                        }
+        .Title {
+                    background-color: #000000;
+                                color: #ffffff;
+                                            padding: 15px 0;
+                                                        font-weight: bold;
+                                                                    letter-spacing: 2px;
+                                                                                margin-bottom: 30px;
+                                                                                        }
+        .section-title {
+                    margin: 20px 0 15px;
+                                font-size: 1rem;
+                                            font-weight: bold;
+                                                    }
+        .row {
+                    display: flex;
+                                justify-content: center;
+                                            align-items: center;
+                                                        gap: 20px;
+                                                                    min-height: 180px;
+                                                                                width: 100%;
+                                                                                        }
+        .A, .B, .C, .D, .E, .F {
+                    width: 90px;
+                                height: 110px;
+                                            border-radius: 8px;
+                                                        display: flex;
+                                                                    align-items: center;
+                                                                                justify-content: center;
+                                                                                            color: white;
+                                                                                                        font-weight: bold;
+                                                                                                                    font-style: italic;
+                                                                                                                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                                                                                                                                        }
+        /* Hover Animations */
+                .A, .B, .C {
+                            background-color: #0077be; /* Ocean Blue */
+                                        transition: transform 0.5s ease, background-color 0.5s ease;
+                                                }
+        .A:hover {
+                    transform: translateX(-30px);
+                                background-color: #87ceeb; /* Sky Blue */
+                                        }
+        .B:hover {
+                    transform: scale(3);
+                                background-color: #87ceeb; /* Sky Blue */
+                                        }
+        .C:hover {
+                    transform: translateX(30px);
+                                background-color: #87ceeb; /* Sky Blue */
+                                        }
+        /* Automatic Animations */
+                .D, .E, .F {
+                            background-color: #0077be; /* Ocean Blue */
+                                    }
+        .D {
+                    animation: moveLeft 1s infinite alternate ease-in-out;
+                            }
+        @keyframes moveLeft {
+                    from {
+                                    transform: translateX(0);
+                                                }
+                                                            to {
+                                                                            transform: translateX(-30px);
+                                                                                        }
+                                                                                                }
+        .E {
+                    animation: scaleUp 1s infinite alternate ease-in-out;
+                            }
+        @keyframes scaleUp {
+                    from {
+                                    transform: scale(1);
+                                                }
+                                                            to {
+                                                                            transform: scale(3);
+                                                                                        }
+                                                                                                }
+        .F {
+                    animation: moveRight 1s infinite alternate ease-in-out;
+                            }
+        @keyframes moveRight {
+                    from {
+                                    transform: translateX(0);
+                                                }
+                                                            to {
+                                                                            transform: translateX(30px);
+                                                                                        }
+                                                                                                }
+                                                                                                    </style>
+                                                                                                    </head>
+<body>
+
+    <div class="Title">ANIMATION</div>
+    <div class="section-title">Animation via Hover</div>
+    <div class="row">
+            <div class="A">left</div>
+                    <div class="B">center</div>
+                            <div class="C">right</div>
+                                </div>
+    <div class="section-title">Automatic Animations</div>
+    <div class="row">
+            <div class="D">left</div>
+                    <div class="E">center</div>
+                            <div class="F">right</div>
+                                </div>
+</body>
+</html>
